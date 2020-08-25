@@ -8,6 +8,8 @@
 #navbar {
   display: flex;
   align-items: center;
+  position: sticky;
+
 }
 
 #navbar::before {
@@ -36,7 +38,7 @@
 
 /* Navigation bar : List styling */
 #navbar {
-  position: relative;
+  position: sticky;
   top: 0px;
 }
 
@@ -109,7 +111,7 @@
   border: 2px solid brown;
   padding: 34px;
   border-radius: 23px;
-  margin: 3px 6px;
+  margin: 25px 6px;
   background-color: #f2f2f2;
 }
 
@@ -124,12 +126,11 @@
 }
 
 /* CLients Section */
-
-#client-section{
+#client-section {
   height: 344px;
 }
 
-#client-section::before{
+#client-section::before {
   content: "";
   position: absolute;
   background-image: url(../Images/bg8.jpg);
@@ -139,27 +140,26 @@
   opacity: 0.8;
 }
 
-#clients{
+#clients {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#clients img{
+#clients img {
   height: 100px;
 }
 
-.client-item{
+.client-item {
   padding: 34px;
 }
 
 /* Contact Section */
-
-#contact{
-  position:relative;
+#contact {
+  position: relative;
 }
 
-#contact::before{
+#contact::before {
   content: "";
   position: absolute;
   height: 100%;
@@ -169,36 +169,34 @@
   background-image: url("../Images/bg10.jpg");
 }
 
-footer{
+footer {
   background: black;
   color: white;
   padding: 9px 20px;
 }
 
-#contact-box input, #contact-box textarea{
+#contact-box input, #contact-box textarea {
   width: 100%;
   padding: 0.5rem;
   border-radius: 9px;
   font-size: 1.3rem;
 }
 
-#contact-box{
+#contact-box {
   display: flex;
   justify-content: center;
   align-items: center;
   padding-bottom: 34px;
 }
 
-#contact-box form{
+#contact-box form {
   width: 48%;
-
 }
 
-#contact-box label{
+#contact-box label {
   font-size: 1.3rem;
   font-family: 'Bree Serif', serif;
 }
-
 
 /* Utility Classes */
 .h-primary {
@@ -269,4 +267,65 @@ footer{
 .btn:active {
   position: relative;
   top: 1px;
+}
+
+
+            /* Responsive behaviour to website */
+
+@media only screen and (max-width: 1015px) {
+/* Navigation */
+
+#navbar{
+  flex-direction: column;
+}
+#navbar ul li a{
+  font-size:1.5rem;
+  padding: 0px 7px;
+}
+
+.h-primary{
+  font-size: 1.5rem;
+}
+p{
+  font-size: 1rem;
+}
+/* HOme section */
+
+#home{
+  height:370px;
+  padding: 3px 68px;
+}
+
+#home::before{
+  height: 480px;
+}
+
+/* Services section */
+#services {
+  flex-direction: column;
+}
+
+/* Clients section */
+#clients{
+  flex-wrap: wrap;
+}
+
+#clients img{
+  width: 50px;
+  /* padding: 2px 16px; */
+  height:100px;
+}
+
+.btn{
+  font-size: 13px;
+  padding: 4px 8px;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+/* Contact me section */
+
+
+/* Footer section */
 }
